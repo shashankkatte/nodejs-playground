@@ -28,3 +28,12 @@ const toArray = (...args) => {
   return args;
 };
 console.log(toArray(1,2,3,4));
+
+//  Destructuring is a neat functionality in javascript that aloows us to strip only the data needed for our code snippet
+// object destructuring
+const {name, age} = person;
+console.log(name, age);
+
+//array destructuring
+const [first, second] = hobbies;
+console.log(first,second);
