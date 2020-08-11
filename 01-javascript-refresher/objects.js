@@ -15,3 +15,16 @@ person.greet();
 // Arrays and map method
 const hobbies = ['sports', 'cooking'];
 console.log(hobbies.map((hobby) => 'hobby: ' + hobby));
+
+// the  operator ( 3 dots) ... is used to strip values from an array or object and copy the contents to another - spread
+const copiedArray = [...hobbies];
+console.log(copiedArray);
+
+const copiedPerson = { ...person };
+console.log(copiedPerson);
+
+// the same ... operator becomes a rest operator when used the context of functions taking multiple arguments
+const toArray = (...args) => {
+  return args;
+};
+console.log(toArray(1,2,3,4));
