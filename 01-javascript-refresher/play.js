@@ -1,7 +1,12 @@
 // The basics of declaring variables
-var name = 'Tony Stark';
-var age = 35;
-var hasHobbies = true;
+// var name = 'Tony Stark';
+// var age = 35;
+// var hasHobbies = true;
+
+// Var is outdated way of declaring variables use let and const instead to make the declaration more clear and intentional
+const name = 'Tony Stark';
+let age = 35;
+const hasHobbies = true;
 // console.log(name);
 
 function summerizeUser(name, age, userHobbies) {
