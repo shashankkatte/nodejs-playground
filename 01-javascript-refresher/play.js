@@ -10,7 +10,19 @@ let age = 35;
 const hasHobbies = true;
 // console.log(name);
 
-function summerizeUser(name, age, userHobbies) {
+// function summerizeUser(name, age, userHobbies) {
+//   return (
+//       'Name is '+
+//       name +
+//       ', age is '+
+//       age+
+//       ' and the user has hobbies: '+
+//       userHobbies
+//   );
+// }
+
+// Arrow functions : Above function can be rewritten using arrow function this way:
+const summerizeUser = (name, age, userHobbies) =>  {
   return (
       'Name is '+
       name +
@@ -21,4 +33,13 @@ function summerizeUser(name, age, userHobbies) {
   );
 }
 
+// Short cut arrow function
+// const add = (first, second)=> first + second;
+// const addone = first => first + 1;
+const addRandom = () => 2 + 1;
+
+// console.log(add(1,2));
+// console.log(addone(1));
+console.log(addRandom());
 console.log(summerizeUser(name,age,hasHobbies));
+
