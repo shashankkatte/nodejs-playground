@@ -4,8 +4,8 @@
 const http = require('http');
 
 // the http object has the create server method which does what its named after - creates a server. it takes a call back function as an argument here we use an anonymous function and are logging request object to the console
-const server = http.createServer((req,res) => {
-    console.log(req);
+const server = http.createServer((req, res) => {
+  console.log(req.url, req.method, req.headers);
 });
 
 // Now we need this server to be always listening so... this is how we do it.
