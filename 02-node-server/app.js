@@ -2,11 +2,13 @@
 
 // You need to import the capability to bring up a server through HTTP and this is how you include the module readily provided by node
 const http = require('http');
+const fs = require('fs');
 
 // the http object has the create server method which does what its named after - creates a server. it takes a call back function as an argument here we use an anonymous function and are logging request object to the console
 const server = http.createServer((req, res) => {
   //   parse the url
   const url = req.url;
+  const method = req.method;
   if (url === '/') {
     res.write('<html>');
     res.write('<head><title>Enter message</title></head>');
@@ -14,6 +16,12 @@ const server = http.createServer((req, res) => {
       '<body><form action="/message" method="POST"><input type="text" name="message"><button type="submit">send</button></form></body>'
     );
     res.write('</html>');
+    return res.end();
+  }
+  if (url === '/message' && method === 'POST') {
+    fs.writeFileSync('message.txt', 'Dummy');
+    res.statusCode = 302;
+    res.setHeader('Location', '/');
     return res.end();
   }
   res.setHeader('Content-Type', 'text/html');
