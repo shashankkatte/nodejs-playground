@@ -1,0 +1,16 @@
+{
+  "name": "04-nodemon-autorestart",
+  "version": "1.0.0",
+  "description": "Demo of nodemon with autorestart",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "Shashank Katte",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
