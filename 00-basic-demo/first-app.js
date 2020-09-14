@@ -1,4 +1,4 @@
-// The obligatory hellow world print to console
+// The obligatory hello world print to console
 // console.log("Hello from Node.js");
 
 //A simple way to demo nodejs writing to file system
